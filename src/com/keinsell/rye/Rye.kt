@@ -1,5 +1,5 @@
 // Copyright 2000-2022 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license.
-package com.koxudaxi.rye
+package com.keinsell.rye
 
 import com.google.gson.annotations.SerializedName
 import com.intellij.codeInspection.LocalQuickFix
@@ -44,6 +44,7 @@ import com.intellij.openapi.util.text.StringUtil
 import com.intellij.openapi.vfs.StandardFileSystems
 import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.serviceContainer.AlreadyDisposedException
+import com.intellij.util.IconUtil
 import com.intellij.util.PathUtil
 import com.intellij.util.PlatformUtils
 import com.jetbrains.python.PythonModuleTypeBase
@@ -62,7 +63,6 @@ import com.jetbrains.python.sdk.add.PyAddSdkPanel
 //import com.jetbrains.python.sdk.add.target.validateExecutableFile
 import com.jetbrains.python.sdk.flavors.PythonSdkFlavor
 import com.jetbrains.python.statistics.modules
-import icons.PythonIcons
 import org.apache.tuweni.toml.Toml
 import org.jetbrains.annotations.Nls
 import org.jetbrains.annotations.SystemDependent
@@ -72,6 +72,7 @@ import java.util.concurrent.TimeUnit
 import java.util.concurrent.TimeoutException
 import java.util.function.Supplier
 import java.util.regex.Pattern
+import javax.swing.Icon
 
 const val PY_PROJECT_TOML: String = "pyproject.toml"
 const val RYE_LOCK: String = "requirements.lock"
@@ -82,7 +83,7 @@ const val DUMP_SETUPTOOLS_VERSION: String = """import setuptools;print(setuptool
 
 val LOCK_FILES = listOf(RYE_LOCK, RYE_DEV_LOCK)
 // TODO: Provide a special icon for rye
-val RYE_ICON = PythonIcons.Python.Virtualenv
+val RYE_ICON = IconUtil.addIcon
 
 /**
  *  This source code is edited by @koxudaxi Koudai Aono <koxudaxi@gmail.com>

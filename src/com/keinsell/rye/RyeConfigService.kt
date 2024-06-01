@@ -1,4 +1,4 @@
-package com.koxudaxi.rye
+package com.keinsell.rye
 
 import com.intellij.openapi.components.PersistentStateComponent
 import com.intellij.openapi.components.ServiceManager

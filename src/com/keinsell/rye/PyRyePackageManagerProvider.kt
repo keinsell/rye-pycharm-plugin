@@ -1,4 +1,4 @@
-package com.koxudaxi.rye
+package com.keinsell.rye
 
 import com.intellij.openapi.projectRoots.Sdk
 import com.jetbrains.python.packaging.PyPackageManager

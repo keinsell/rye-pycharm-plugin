@@ -1,22 +1,22 @@
-<idea-plugin url="https://github.com/koxudaxi/rye-pycharm-plugin">
+<idea-plugin url="https://github.com/keinsell/rye-pycharm-plugin">
     <id>com.koxudaxi.rye</id>
     <name>Rye</name>
-    <vendor email="koaxudai@gmail.com">Koudai Aono @koxudaxi</vendor>
+    <vendor email="keinsell@protonmail.com">Koudai Aono @koxudaxi</vendor>
 
 
     <depends>com.intellij.modules.lang</depends>
     <depends>com.intellij.modules.python</depends>
     <depends>com.intellij.modules.platform</depends>
     <extensions defaultExtensionNs="com.intellij">
-        <editorFactoryListener implementation="com.koxudaxi.rye.PyProjectTomlWatcher"/>
-        <projectService serviceImplementation="com.koxudaxi.rye.RyeConfigService"/>
-        <postStartupActivity implementation="com.koxudaxi.rye.RyeConfigLoader" order="last"/>
+        <editorFactoryListener implementation="com.keinsell.rye.PyProjectTomlWatcher"/>
+        <projectService serviceImplementation="com.keinsell.rye.RyeConfigService"/>
+        <postStartupActivity implementation="com.keinsell.rye.RyeConfigLoader" order="last"/>
     </extensions>
     <extensions defaultExtensionNs="Pythonid">
-        <pyAddSdkProvider implementation="com.koxudaxi.rye.PyAddRyeSdkProvider"/>
-        <pythonFlavorProvider implementation="com.koxudaxi.rye.PyRyeSdkFlavorProvider"/>
-        <pySdkProvider implementation="com.koxudaxi.rye.RyeSdkProvider"/>
-        <packageManagerProvider implementation="com.koxudaxi.rye.PyRyePackageManagerProvider"/>
-        <projectSdkConfigurationExtension implementation="com.koxudaxi.rye.PyRyeSdkConfiguration"/>
+        <pyAddSdkProvider implementation="com.keinsell.rye.PyAddRyeSdkProvider"/>
+        <pythonFlavorProvider implementation="com.keinsell.rye.PyRyeSdkFlavorProvider"/>
+        <pySdkProvider implementation="com.keinsell.rye.RyeSdkProvider"/>
+        <packageManagerProvider implementation="com.keinsell.rye.PyRyePackageManagerProvider"/>
+        <projectSdkConfigurationExtension implementation="com.keinsell.rye.PyRyeSdkConfiguration"/>
     </extensions>
 </idea-plugin>

@@ -15,7 +15,7 @@
  */
 @file:Suppress("DialogTitleCapitalization")
 
-package com.koxudaxi.rye
+package com.keinsell.rye
 
 import com.intellij.openapi.module.Module
 import com.intellij.openapi.project.Project
